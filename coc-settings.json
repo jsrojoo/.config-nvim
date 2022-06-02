@@ -1,0 +1,4 @@
+{
+  "eslint.format.enable": true,
+  "vetur.trace.server": "verbose"
+}
