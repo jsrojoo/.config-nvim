@@ -51,5 +51,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 " Colorschemes
 Plug 'drewtempelmeyer/palenight.vim'
 
+Plug 'roxma/vim-tmux-clipboard'
+
 call plug#end()
 

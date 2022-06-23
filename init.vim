@@ -13,6 +13,9 @@ source ~/.config/nvim/config/coc.vim
 
 let g:coc_global_extensions = [
       \'coc-marketplace',
+      \'coc-sh',
+      \'coc-pyright',
+      \'coc-vimlsp',
       \'coc-tsserver',
       \'coc-ultisnips',
       \'coc-json',
@@ -25,6 +28,7 @@ let g:coc_global_extensions = [
       \'coc-docker',
       \'coc-markmap',
       \'coc-markdown-preview-enhanced',
+      \'coc-webview',
       \]
 
 " unblevable/quick-scope
