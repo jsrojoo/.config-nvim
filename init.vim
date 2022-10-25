@@ -1,5 +1,4 @@
-source ~/.local/share/nvim/site/config/defaults.vim
-
+source ~/.config/nvim/config/defaults.vim
 source ~/.config/nvim/config/plugins.vim
 
 source ~/.config/nvim/config/colors.vim
@@ -10,6 +9,7 @@ source ~/.config/nvim/config/netrw.vim
 source ~/.config/nvim/config/vimux.vim
 source ~/.config/nvim/config/nrrw_rgn.vim
 source ~/.config/nvim/config/coc.vim
+source ~/.config/nvim/config/ghosttext.vim
 
 let g:coc_global_extensions = [
       \'coc-marketplace',
@@ -29,6 +29,8 @@ let g:coc_global_extensions = [
       \'coc-markmap',
       \'coc-markdown-preview-enhanced',
       \'coc-webview',
+      \'coc-pyright',
+      \'coc-jedi',
       \]
 
 " unblevable/quick-scope
@@ -133,20 +135,45 @@ let g:firenvim_config = {'globalSettings': {},'localSettings': {'.*': {'takeover
 
 command Exec set splitright | vnew | set filetype=sh | read !sh #
 
-" configure treesitter
-" lua << EOF
-" -- require'nvim-treesitter.configs'.setup {
-" --   ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-" --   highlight = {
-" --     enable = true,              -- false will disable the whole extension
-" --     disable = { "c", "rust" },  -- list of language that will be disabled
-" --   },
-" -- }
-" require'treesitter-context.config'.setup{
-"     enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
-" }
-" EOF
-
 " indent blankline
 let g:indent_blankline_use_treesitter = v:true
 let g:indent_blankline_char_list = ['┊']
+
+" configure treesitter
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    disable = { "c", "rust" },  -- list of language that will be disabled
+  },
+}
+-- require'treesitter-context.config'.setup{
+--     enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+-- }
+-- require("lsp_lines").setup()
+--
+-- vim.diagnostic.config({
+--   virtual_text = false,
+--   virtual_lines = false,
+-- })
+for _, keymap in pairs({
+  'zo',
+  'zO',
+  'zc',
+  'zC',
+  'za',
+  'zA',
+  'zv',
+  'zx',
+  'zX',
+  'zm',
+  'zM',
+  'zr',
+  'zR',
+}) do
+vim.api.nvim_set_keymap('n', keymap,  keymap .. '<CMD>IndentBlanklineRefresh<CR>', { noremap=true, silent=true })
+end
+EOF
+
+let $GHOSTTEXT_SERVER_PORT = 4002

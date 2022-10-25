@@ -11,9 +11,9 @@ endif
 "
 "
 nnoremap <leader>ag :Ag<Space>
-nnoremap <leader>fa :Files<CR>
+nnoremap <leader>fg :Files<CR>
 nnoremap <leader><space> :Buffers<CR>
-nnoremap <leader>fg :GFiles<CR>
+nnoremap <leader>fa :GFiles<CR>
 nnoremap <leader>ff :Files <C-r>=expand("%:h")<CR>/<CR>
 " nnoremap <leader>ff :FZF<CR>
 nnoremap <leader>fh :Helptags<CR>

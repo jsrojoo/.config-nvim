@@ -41,6 +41,9 @@ Plug 'heavenshell/vim-jsdoc', {
   \ 'do': 'make install'
 \}
 Plug 'romgrk/nvim-treesitter-context'
+Plug 'ziontee113/color-picker.nvim'
+" Plug 'subnut/nvim-ghost.nvim', {'do': ':call nvim_ghost#installer#install()'}
+" Plug 'https://git.sr.ht/~whynothugo/lsp_lines.nvim'
 
 " Aestetics
 Plug 'mhinz/vim-signify'
@@ -50,6 +53,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 
 " Colorschemes
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'shaunsingh/nord.nvim'
 
 Plug 'roxma/vim-tmux-clipboard'
 

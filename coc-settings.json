@@ -1,4 +1,9 @@
 {
   "eslint.format.enable": true,
-  "vetur.trace.server": "verbose"
+  "vetur.trace.server": "verbose",
+  "typescript.suggestionActions.enabled": false,
+  "javascript.suggestionActions.enabled": false,
+  "python.analysis.typeCheckingMode": "off",
+  "python.analysis.useLibraryCodeForTypes": true,
+  "suggest.noselect": true
 }

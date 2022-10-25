@@ -1,16 +1,17 @@
 map <space> <leader>
 
 " COLEMAK mappings
-nnoremap n j
-nnoremap e k
-nnoremap L e
-vnoremap n j
-vnoremap e k
-vnoremap L E
-nnoremap k n
 nnoremap K N
-vnoremap k n
+nnoremap L e
+nnoremap e k
+nnoremap k n
+nnoremap n j
+
 vnoremap K N
+vnoremap L E
+vnoremap e k
+vnoremap k n
+vnoremap n j
 
 " helpers
 nnoremap <leader>w :w!<cr>
@@ -102,7 +103,10 @@ augroup yaml_fix
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:>
 augroup END
 
-let g:python3_host_prog = '/home/i337/.pyenv/versions/3.7.0/bin/python'
+let g:python3_host_prog = '/home/i337/.pyenv/versions/neovim/bin/python'
+let g:node_host_prog = '/tmp/fnm_multishells/24134_1654890666714/bin/node'
+let g:coc_node_path = '/tmp/fnm_multishells/24134_1654890666714/bin/node'
+" let g:python3_host_prog = '/home/i337/.pyenv/versions/3.7.0/bin/python'
 " let g:node_host_prog = '/home/i337/.nvm/versions/node/v14.17.5/bin/node'
 " let g:coc_node_path = '/home/i337/.nvm/versions/node/v14.17.5/bin/node'
 
