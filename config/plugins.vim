@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 " Navigation
-Plug 'junegunn/fzf', { 'do': { -> fzf#install(1337) } }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " Plug 'yuttie/comfortable-motion.vim'
 
