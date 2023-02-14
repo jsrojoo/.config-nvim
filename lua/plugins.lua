@@ -65,6 +65,9 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- speed up loading lua modules in neovim
+  use 'lewis6991/impatient.nvim'
+
   -- Load on an autocommand event
   use {'andymass/vim-matchup', event = 'VimEnter'}
 
@@ -153,6 +156,16 @@ return require('packer').startup(function(use)
         end
       }
     end
+  }
+
+  -- Icons
+  use 'kyazdani42/nvim-web-devicons'
+
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
   }
 
   use 'norcalli/nvim-colorizer.lua'
