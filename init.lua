@@ -11,6 +11,8 @@ require('plugins/indent-blankline')
 require('plugins/smalls')
 require('plugins/quick-scope')
 require('plugins/gitsigns')
+require('plugins/luasnip')
+require('plugins/firenvim')
 
 -- plugins
 require('nvim_comment').setup()

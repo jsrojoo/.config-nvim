@@ -92,6 +92,20 @@ return packer.startup(function(use)
     branch = 'stable'
   }
 
+  use "rafamadriz/friendly-snippets"
+
+  use {
+    "glacambre/firenvim",
+    run = function()
+      vim.fn["firenvim#install"](0)
+    end,
+  }
+
+  use({
+    'terror/chatgpt.nvim',
+    run = 'pip3 install -r requirements.txt'
+  })
+
   use 'shaunsingh/nord.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
