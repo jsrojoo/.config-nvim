@@ -52,8 +52,9 @@ return packer.startup(function(use)
   -- Indent python
   use 'Vimjas/vim-python-pep8-indent'
 
-  use 'ibhagwan/fzf-lua'
-  use { 'junegunn/fzf', run = './install --bin', }
+  -- use 'ibhagwan/fzf-lua'
+  use { "junegunn/fzf", run = ":call fzf#install()" }
+  use 'junegunn/fzf.vim'
 
   use {
     'nvim-treesitter/nvim-treesitter',

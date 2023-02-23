@@ -129,10 +129,10 @@ _G.packer_plugins = {
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/fzf",
     url = "https://github.com/junegunn/fzf"
   },
-  ["fzf-lua"] = {
+  ["fzf.vim"] = {
     loaded = true,
-    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/fzf-lua",
-    url = "https://github.com/ibhagwan/fzf-lua"
+    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/fzf.vim",
+    url = "https://github.com/junegunn/fzf.vim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,

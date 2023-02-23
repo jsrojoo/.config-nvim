@@ -52,15 +52,15 @@ nmap('<C-s>', '<C-a>')
 -----------------------------------------------------------
 -- FZF
 
-nmapleader('ag', ':FzfLua grep_project<cr>')
-nmapleader('fg', ':FzfLua files<cr>')
-nmapleader('<space>', ':FzfLua buffers<cr>')
-nmapleader('fa', ':FzfLua git_files<cr>')
-nmapleader('ff', ':FzfLua files cwd=<C-r>=expand("%:h")<CR>/<CR>')
-nmapleader('ss', ':FzfLua blines<cr>')
-nmapleader('cw', ':FzfLua grep_cword<cr>')
-nmapleader('fc', ':FzfLua commands<cr>')
-nmapleader('fh', ':FzfLua help_tags<cr>')
+nmapleader('ag', ':Ag <space>')
+nmapleader('fg', ':Files<cr>')
+nmapleader('<space>', ':Buffers<cr>')
+nmapleader('fa', ':GFiles<cr>')
+nmapleader('ff', ':Files cwd=<C-r>=expand("%:h")<CR>/<CR>')
+nmapleader('ss', ':Blines<cr>')
+nmapleader('cw', ':Rg <C-R><C-W><CR>')
+nmapleader('fc', ':Commands<cr>')
+nmapleader('fh', ':Helptags<cr>')
 
 -- Smalls
 map('n', 's', '<Plug>(smalls)', { noremap=false })
