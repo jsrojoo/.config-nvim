@@ -50,7 +50,7 @@ opt.listchars = {
 opt.fillchars = {
   vert = "│",
   fold = "⠀",
-  eob = " ", -- suppress ~ at EndOfBuffer
+  eob = "`", -- suppress ~ at EndOfBuffer
   --diff = "⣿", -- alternatives = ⣿ ░ ─ ╱
   msgsep = "‾",
   foldopen = "▾",

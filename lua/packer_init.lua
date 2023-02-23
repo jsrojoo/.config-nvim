@@ -44,7 +44,7 @@ return packer.startup(function(use)
   -- File explorer
   use 'kyazdani42/nvim-tree.lua'
   -- Icons
-  use 'kyazdani42/nvim-web-devicons'
+  -- use 'kyazdani42/nvim-web-devicons'
 
   -- Indent line
   use 'lukas-reineke/indent-blankline.nvim'
@@ -105,6 +105,11 @@ return packer.startup(function(use)
     'terror/chatgpt.nvim',
     run = 'pip3 install -r requirements.txt'
   })
+
+  use {
+      "vinnymeller/swagger-preview.nvim",
+      run = "npm install -g swagger-ui-watcher",
+  }
 
   use 'shaunsingh/nord.nvim'
   -- Automatically set up your configuration after cloning packer.nvim

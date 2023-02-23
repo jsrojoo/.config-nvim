@@ -16,3 +16,4 @@ require('plugins/firenvim')
 
 -- plugins
 require('nvim_comment').setup()
+require('swagger-preview').setup({})
