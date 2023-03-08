@@ -52,12 +52,12 @@ nmap('<C-s>', '<C-a>')
 -----------------------------------------------------------
 -- FZF
 
-nmapleader('ag', ':Ag <space>')
+nmapleader('ag', ':Ag <space><cr>')
 nmapleader('fg', ':Files<cr>')
 nmapleader('<space>', ':Buffers<cr>')
 nmapleader('fa', ':GFiles<cr>')
-nmapleader('ff', ':Files cwd=<C-r>=expand("%:h")<CR>/<CR>')
-nmapleader('ss', ':Blines<cr>')
+-- nmapleader('ff', ':<C-r>=expand("%:h")<CR>/<CR>')
+nmapleader('ss', ':BLines<cr>')
 nmapleader('cw', ':Rg <C-R><C-W><CR>')
 nmapleader('fc', ':Commands<cr>')
 nmapleader('fh', ':Helptags<cr>')

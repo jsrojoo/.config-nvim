@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/black",
     url = "https://github.com/psf/black"
   },
-  ["chatgpt.nvim"] = {
-    loaded = true,
-    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/chatgpt.nvim",
-    url = "https://github.com/terror/chatgpt.nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -148,6 +143,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["jupynium.nvim"] = {
+    loaded = true,
+    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/jupynium.nvim",
+    url = "https://github.com/kiyoon/jupynium.nvim"
+  },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["nord.nvim"] = {
     loaded = true,

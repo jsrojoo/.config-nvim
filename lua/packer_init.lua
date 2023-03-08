@@ -102,15 +102,21 @@ return packer.startup(function(use)
     end,
   }
 
-  use({
-    'terror/chatgpt.nvim',
-    run = 'pip3 install -r requirements.txt'
-  })
-
   use {
       "vinnymeller/swagger-preview.nvim",
       run = "npm install -g swagger-ui-watcher",
   }
+
+  use {
+    "kiyoon/jupynium.nvim",
+    run = "pip3 install --user .",
+    build = "conda run --no-capture-output -n jupynium pip install .",
+  }
+
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
 
   use 'shaunsingh/nord.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
