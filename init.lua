@@ -18,3 +18,6 @@ require('plugins/firenvim')
 -- plugins
 require('nvim_comment').setup()
 require('swagger-preview').setup({})
+
+require('dap-python').setup('/opt/homebrew/Caskroom/miniconda/base/bin/python')
+require("tint").setup()

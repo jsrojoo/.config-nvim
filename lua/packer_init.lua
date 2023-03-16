@@ -118,7 +118,11 @@ return packer.startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
 
+  use 'mfussenegger/nvim-dap'
+  use 'mfussenegger/nvim-dap-python'
+
   use 'shaunsingh/nord.nvim'
+  use 'levouh/tint.nvim'
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
