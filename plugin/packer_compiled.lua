@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["eslint.nvim"] = {
+    loaded = true,
+    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/eslint.nvim",
+    url = "https://github.com/MunifTanjim/eslint.nvim"
+  },
   firenvim = {
     loaded = true,
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/firenvim",
@@ -149,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/jupynium.nvim",
     url = "https://github.com/kiyoon/jupynium.nvim"
   },
+  ["local-highlight.nvim"] = {
+    loaded = true,
+    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/local-highlight.nvim",
+    url = "https://github.com/tzachar/local-highlight.nvim"
+  },
   ["markdown-preview.nvim"] = {
     loaded = true,
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
@@ -159,6 +169,11 @@ _G.packer_plugins = {
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/nord.nvim",
     url = "https://github.com/shaunsingh/nord.nvim"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -168,6 +183,21 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/nvim-comment",
     url = "https://github.com/terrortylor/nvim-comment"
+  },
+  ["nvim-coverage"] = {
+    loaded = true,
+    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/nvim-coverage",
+    url = "https://github.com/andythigpen/nvim-coverage"
+  },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
+  ["nvim-dap-python"] = {
+    loaded = true,
+    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/nvim-dap-python",
+    url = "https://github.com/mfussenegger/nvim-dap-python"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -189,6 +219,11 @@ _G.packer_plugins = {
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
+  },
   ["quick-scope"] = {
     loaded = true,
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/quick-scope",
@@ -203,6 +238,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/targets.vim",
     url = "https://github.com/wellle/targets.vim"
+  },
+  ["tint.nvim"] = {
+    loaded = true,
+    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/tint.nvim",
+    url = "https://github.com/levouh/tint.nvim"
+  },
+  ["typescript.nvim"] = {
+    loaded = true,
+    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/typescript.nvim",
+    url = "https://github.com/jose-elias-alvarez/typescript.nvim"
   },
   ["vim-fugitive"] = {
     loaded = true,
@@ -233,6 +278,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-table-mode"] = {
+    loaded = true,
+    path = "/Users/joseph.rojo/.local/share/nvim/site/pack/packer/start/vim-table-mode",
+    url = "https://github.com/dhruvasagar/vim-table-mode"
   },
   ["vim-tmux-navigator"] = {
     loaded = true,

@@ -36,7 +36,8 @@ return packer.startup(function(use)
  -- Add you plugins here:
   use 'wbthomason/packer.nvim' -- packer can manage itself
 
-  use 'neovim/nvim-lspconfig' 
+  use 'neovim/nvim-lspconfig'
+  use "nvim-lua/plenary.nvim"
 
   -- speed up loading lua modules in neovim
   use 'lewis6991/impatient.nvim'
@@ -88,10 +89,16 @@ return packer.startup(function(use)
   use 'unblevable/quick-scope'
   use 'wellle/targets.vim'
   use 'christoomey/vim-tmux-navigator'
+  use 'dhruvasagar/vim-table-mode'
   use {
     'psf/black',
     branch = 'stable'
   }
+  use 'jose-elias-alvarez/null-ls.nvim'
+  use 'jose-elias-alvarez/typescript.nvim'
+  use 'MunifTanjim/eslint.nvim'
+  use 'andythigpen/nvim-coverage'
+
 
   use "rafamadriz/friendly-snippets"
 
@@ -120,6 +127,8 @@ return packer.startup(function(use)
 
   use 'mfussenegger/nvim-dap'
   use 'mfussenegger/nvim-dap-python'
+
+  use 'tzachar/local-highlight.nvim'
 
   use 'shaunsingh/nord.nvim'
   use 'levouh/tint.nvim'

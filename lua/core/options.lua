@@ -19,7 +19,7 @@ opt.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
 opt.swapfile = false                  -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 
-g.python3_host_prog = '/opt/homebrew/Caskroom/miniconda/base/envs/jupynium/bin/python'
+g.python3_host_prog = home .. '/.pyenv/versions/3.9.16/bin/python'
 -- g.node_host_prog = home .. '/Library/Caches/fnm_multishells/21916_1676432414149/bin/node'
 -----------------------------------------------------------
 -- Neovim UI

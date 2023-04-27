@@ -14,10 +14,15 @@ require('plugins/quick-scope')
 require('plugins/gitsigns')
 require('plugins/luasnip')
 require('plugins/firenvim')
+require('plugins/null-ls')
+require('plugins/eslint')
 
 -- plugins
 require('nvim_comment').setup()
 require('swagger-preview').setup({})
 
 require('dap-python').setup('/opt/homebrew/Caskroom/miniconda/base/bin/python')
-require("tint").setup()
+require("tint").setup({})
+require('local-highlight').setup({})
+require("typescript").setup({})
+require("coverage").setup({})
