@@ -5,6 +5,10 @@ if not status_ok then
 end
 
 fzf_lua.setup {
+  'fzf-vim',
+  winopts = {
+    backdrop = 100,
+  },
   fzf_colors = {
     ["fg"] = { "fg", "Normal" },
     ["bg"] = { "bg", "Normal" },
