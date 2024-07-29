@@ -19,8 +19,8 @@ opt.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
 opt.swapfile = false                  -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 
-g.python3_host_prog = home .. '/.pyenv/versions/3.9.16/bin/python'
--- g.node_host_prog = home .. '/Library/Caches/fnm_multishells/21916_1676432414149/bin/node'
+g.python3_host_prog = home .. '/.pyenv/versions/nvim/bin/python'
+-- g.node_host_prog = home .. '/Library/Caches/fnm_multishells/12713_1683804398775/bin/node'
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------

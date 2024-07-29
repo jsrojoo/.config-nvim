@@ -1,5 +1,3 @@
-require('impatient')
-
 require('core/options')
 require('core/keymaps')
 
@@ -14,8 +12,10 @@ require('plugins/quick-scope')
 require('plugins/gitsigns')
 require('plugins/luasnip')
 require('plugins/firenvim')
-require('plugins/null-ls')
+-- require('plugins/null-ls')
 require('plugins/eslint')
+require('plugins/coc')
+require('plugins/obsidian')
 
 -- plugins
 require('nvim_comment').setup()
@@ -26,3 +26,5 @@ require("tint").setup({})
 require('local-highlight').setup({})
 require("typescript").setup({})
 require("coverage").setup({})
+
+require('fzf-lua').setup({'fzf-vim'})

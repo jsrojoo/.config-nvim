@@ -52,16 +52,14 @@ nmap('<C-s>', '<C-a>')
 -----------------------------------------------------------
 -- FZF
 
-nmapleader('ag', ':Ag <space><cr>')
-nmapleader('fg', ':Files<cr>')
-nmapleader('<space>', ':Buffers<cr>')
-nmapleader('fa', ':GFiles<cr>')
-nmap('<C-p>', ':GFiles<cr>')
--- nmapleader('ff', ':<C-r>=expand("%:h")<CR>/<CR>')
-nmapleader('ss', ':BLines<cr>')
-nmapleader('cw', ':Rg <C-R><C-W><CR>')
-nmapleader('fc', ':Commands<cr>')
-nmapleader('fh', ':Helptags<cr>')
+nmapleader('ag', ':FzfLua grep_project<cr>')
+nmapleader('fg', ':FzfLua files<cr>')
+nmapleader('<space>', ':FzfLua buffers<cr>')
+nmapleader('fa', ':FzfLua git_files<cr>')
+nmapleader('ss', ':FzfLua lines<cr>')
+nmapleader('cw', ':FzfLua grep_cword<cr>')
+nmapleader('fc', ':FzfLua commands<cr>')
+nmapleader('fh', ':FzfLua helptags<cr>')
 
 -- Smalls
 map('n', 's', '<Plug>(smalls)', { noremap=false })
