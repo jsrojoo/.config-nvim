@@ -62,6 +62,13 @@ return packer.startup(function(use)
     end,
   }
 
+  use {
+    "theHamsta/nvim-treesitter-pairs",
+  }
+  -- use {
+  --   "RRethy/nvim-treesitter-textsubjects",
+  -- }
+
   -- Autocomplete
   use {
     'hrsh7th/nvim-cmp',
@@ -96,15 +103,22 @@ return packer.startup(function(use)
   use 'jose-elias-alvarez/typescript.nvim'
   use 'MunifTanjim/eslint.nvim'
   use 'andythigpen/nvim-coverage'
-  -- use {'andymass/vim-matchup', event = 'VimEnter'}
-  -- use {
-  --   "windwp/nvim-autopairs",
-  --   event = "InsertEnter",
-  --   config = function()
-  --     require("nvim-autopairs").setup {}
-  --   end
-  -- }
+  use {'andymass/vim-matchup', event = 'VimEnter'}
+  use {'adelarsq/vim-matchit', event = 'VimEnter'}
+  use {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+      require("nvim-autopairs").setup {}
+    end
+  }
 
+  use {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup {}
+    end
+  }
 
   use "rafamadriz/friendly-snippets"
 
@@ -139,22 +153,22 @@ return packer.startup(function(use)
   use 'shaunsingh/nord.nvim'
   use 'levouh/tint.nvim'
 
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.6',
-  -- or                            , branch = '0.1.x',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+  -- use {
+  --   'nvim-telescope/telescope.nvim', tag = '0.1.6',
+  -- -- or                            , branch = '0.1.x',
+  --   requires = { {'nvim-lua/plenary.nvim'} }
+  -- }
 
-  use({
-    "epwalsh/obsidian.nvim",
-    tag = "*",  -- recommended, use latest release instead of latest commit
-    requires = {
-      -- Required.
-      "nvim-lua/plenary.nvim",
-
-      -- see below for full list of optional dependencies 👇
-    },
-  })
+  -- use({
+  --   "epwalsh/obsidian.nvim",
+  --   tag = "*",  -- recommended, use latest release instead of latest commit
+  --   requires = {
+  --     -- Required.
+  --     "nvim-lua/plenary.nvim",
+  --
+  --     -- see below for full list of optional dependencies 👇
+  --   },
+  -- })
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
