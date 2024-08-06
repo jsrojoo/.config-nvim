@@ -9,8 +9,20 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+local function modemap(mode, lhs, rhs, opts)
+  return map(mode, lhs, rhs, opts)
+end
+
 local function nmap(lhs, rhs, opts)
-  return map('n', lhs, rhs, opts)
+  return modemap('n', lhs, rhs, opts)
+end
+
+local function tmap(lhs, rhs, opts)
+  return modemap('t', lhs, rhs, opts)
+end
+
+local function tmapleader(lsh, rhs, opts)
+  return tmap('<space>' .. lsh, rhs, opts)
 end
 
 local function nmapleader(lsh, rhs, opts)
@@ -36,6 +48,8 @@ nmapleader(';', ':')
 
 nmapleader('fs', ':set foldmethod=expr<CR>')
 nmapleader('fi', ':set foldmethod=indent<CR>')
+
+tmapleader('<esc>', '<C-\\><C-n>')
 
 nmap('<C-h>', '<C-w>h')
 nmap('<C-j>', '<C-w>j')

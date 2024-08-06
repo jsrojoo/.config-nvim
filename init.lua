@@ -15,7 +15,8 @@ require('plugins/firenvim')
 -- require('plugins/null-ls')
 require('plugins/eslint')
 require('plugins/coc')
-require('plugins/obsidian')
+-- require('plugins/obsidian')
+require('plugins/nvim-treesitter')
 
 -- plugins
 require('nvim_comment').setup()

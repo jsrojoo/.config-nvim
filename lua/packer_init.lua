@@ -104,7 +104,6 @@ return packer.startup(function(use)
   use 'MunifTanjim/eslint.nvim'
   use 'andythigpen/nvim-coverage'
   use {'andymass/vim-matchup', event = 'VimEnter'}
-  use {'adelarsq/vim-matchit', event = 'VimEnter'}
   use {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
@@ -145,6 +144,18 @@ return packer.startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
 
+  use({
+    'MeanderingProgrammer/markdown.nvim',
+    as = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+    after = { 'nvim-treesitter' },
+    requires = { 'echasnovski/mini.nvim', opt = true }, -- if you use the mini.nvim suite
+    -- requires = { 'echasnovski/mini.icons', opt = true }, -- if you use standalone mini plugins
+    -- requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
+    config = function()
+      require('render-markdown').setup({})
+    end,
+  })
+
   use 'mfussenegger/nvim-dap'
   use 'mfussenegger/nvim-dap-python'
 
@@ -152,6 +163,7 @@ return packer.startup(function(use)
 
   use 'shaunsingh/nord.nvim'
   use 'levouh/tint.nvim'
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   -- use {
   --   'nvim-telescope/telescope.nvim', tag = '0.1.6',
