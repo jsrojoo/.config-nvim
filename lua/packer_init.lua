@@ -62,6 +62,8 @@ return packer.startup(function(use)
     end,
   }
 
+  use { 'nvim-treesitter/nvim-treesitter-context', }
+
   use {
     "theHamsta/nvim-treesitter-pairs",
   }
@@ -119,6 +121,14 @@ return packer.startup(function(use)
     end
   }
 
+  use {
+    "pmizio/typescript-tools.nvim",
+    requires = { "neovim/nvim-lspconfig" },
+    config = function()
+      require("typescript-tools").setup {}
+    end,
+  }
+
   use "rafamadriz/friendly-snippets"
 
   use {
@@ -164,6 +174,13 @@ return packer.startup(function(use)
   use 'shaunsingh/nord.nvim'
   use 'levouh/tint.nvim'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
+
+  use {
+    'kevinhwang91/nvim-hlslens',
+    config = function ()
+      require('hlslens').setup {}
+    end
+  }
 
   -- use {
   --   'nvim-telescope/telescope.nvim', tag = '0.1.6',
