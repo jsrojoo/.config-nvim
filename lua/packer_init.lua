@@ -36,11 +36,9 @@ return packer.startup(function(use)
  -- Add you plugins here:
   use 'wbthomason/packer.nvim' -- packer can manage itself
 
-  use 'neovim/nvim-lspconfig'
-  use "nvim-lua/plenary.nvim"
+  use "rose-pine/neovim"
 
-  -- speed up loading lua modules in neovim
-  use 'lewis6991/impatient.nvim'
+  use 'neovim/nvim-lspconfig'
 
   -- File explorer
   use 'kyazdani42/nvim-tree.lua'
@@ -54,6 +52,7 @@ return packer.startup(function(use)
   use 'Vimjas/vim-python-pep8-indent'
 
   use "ibhagwan/fzf-lua"
+  use 'nanotee/zoxide.vim'
 
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -67,6 +66,7 @@ return packer.startup(function(use)
   use {
     "theHamsta/nvim-treesitter-pairs",
   }
+
   -- use {
   --   "RRethy/nvim-treesitter-textsubjects",
   -- }
@@ -97,14 +97,17 @@ return packer.startup(function(use)
   use 'wellle/targets.vim'
   use 'christoomey/vim-tmux-navigator'
   use 'dhruvasagar/vim-table-mode'
-  use {
-    'psf/black',
-    branch = 'stable'
-  }
   use 'jose-elias-alvarez/null-ls.nvim'
   use 'jose-elias-alvarez/typescript.nvim'
   use 'MunifTanjim/eslint.nvim'
-  use 'andythigpen/nvim-coverage'
+  use {
+    'andythigpen/nvim-coverage',
+    requires = {
+      "nvim-lua/plenary.nvim"
+    }
+  }
+  -- use "nvim-lua/plenary.nvim"
+
   use {'andymass/vim-matchup', event = 'VimEnter'}
   use {
     "windwp/nvim-autopairs",
@@ -121,14 +124,6 @@ return packer.startup(function(use)
     end
   }
 
-  use {
-    "pmizio/typescript-tools.nvim",
-    requires = { "neovim/nvim-lspconfig" },
-    config = function()
-      require("typescript-tools").setup {}
-    end,
-  }
-
   use "rafamadriz/friendly-snippets"
 
   use {
@@ -142,12 +137,6 @@ return packer.startup(function(use)
       "vinnymeller/swagger-preview.nvim",
       run = "npm install -g swagger-ui-watcher",
   }
-
-  -- use {
-  --   "kiyoon/jupynium.nvim",
-  --   run = "pip3 install --user .",
-  --   build = "conda run --no-capture-output -n jupynium pip install .",
-  -- }
 
   use({
     "iamcco/markdown-preview.nvim",
@@ -182,11 +171,18 @@ return packer.startup(function(use)
     end
   }
 
-  -- use {
-  --   'nvim-telescope/telescope.nvim', tag = '0.1.6',
-  -- -- or                            , branch = '0.1.x',
-  --   requires = { {'nvim-lua/plenary.nvim'} }
-  -- }
+  use {'kevinhwang91/nvim-bqf'}
+
+  use({
+    "stevearc/quicker.nvim",
+    config = function()
+      require("quicker").setup()
+    end,
+  })
+
+  use "jbyuki/venn.nvim"
+
+  use {"shortcuts/no-neck-pain.nvim", tag = "*" }
 
   -- use({
   --   "epwalsh/obsidian.nvim",
@@ -198,6 +194,7 @@ return packer.startup(function(use)
   --     -- see below for full list of optional dependencies 👇
   --   },
   -- })
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then

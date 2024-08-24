@@ -18,12 +18,14 @@ opt.mouse = 'a'                       -- Enable mouse support
 opt.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
 opt.swapfile = false                  -- Don't use swapfile
 opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
+opt.pumheight = 4
 
-g.python3_host_prog = home .. '/.pyenv/versions/nvim/bin/python'
+-- g.python3_host_prog = home .. '/.pyenv/versions/nvim/bin/python'
 -- g.node_host_prog = home .. '/Library/Caches/fnm_multishells/12713_1683804398775/bin/node'
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
+opt.background = 'light'
 opt.number = true           -- Show line number
 opt.relativenumber = true   -- Show relative line numbers
 opt.showmatch = true        -- Highlight matching parenthesis
@@ -59,7 +61,6 @@ opt.fillchars = {
   foldclose = "▸",
 }
 
-vim.cmd.colorscheme('nord')
 -----------------------------------------------------------
 -- Tabs, indent
 -----------------------------------------------------------
@@ -84,7 +85,7 @@ opt.updatetime = 250        -- ms to wait for trigger an event
 -- Disable nvim intro
 opt.shortmess:append "sI"
 
--- -- Disable builtin plugins
+-- Disable builtin plugins
 local disabled_built_ins = {
    "2html_plugin",
    "getscript",

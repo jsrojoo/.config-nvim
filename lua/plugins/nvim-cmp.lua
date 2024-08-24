@@ -19,12 +19,13 @@ end
 
 cmp.setup {
   snippet = {
+    keyword_length = 1,
     expand = function(args)
       luasnip.lsp_expand(args.body)
     end,
   },
   completion = {
-    keyword_length = 2
+    keyword_length = 3
   },
   mapping = {
     ['<C-j>'] = cmp.mapping.select_next_item(),
@@ -38,7 +39,7 @@ cmp.setup {
   },
   sources = {
     { name = 'nvim_lsp' },
-    { name = 'luasnip' },
+    { name = 'luasnip', keyword_length = 1 },
     { name = 'path' },
     { name = 'buffer' },
   }
@@ -50,4 +51,19 @@ cmp.setup.cmdline({ '/', '?' }, {
   sources = {
     { name = 'buffer' }
   }
+})
+
+-- `:` cmdline setup.
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+      {
+        name = 'cmdline',
+        option = {
+          ignore_cmds = { 'Man', '!' }
+        }
+      }
+    })
 })
