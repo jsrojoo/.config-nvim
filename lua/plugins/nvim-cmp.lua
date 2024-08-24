@@ -27,6 +27,10 @@ cmp.setup {
   completion = {
     keyword_length = 3
   },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
   mapping = {
     ['<C-j>'] = cmp.mapping.select_next_item(),
     ['<C-k>'] = cmp.mapping.select_prev_item(),
@@ -53,17 +57,14 @@ cmp.setup.cmdline({ '/', '?' }, {
   }
 })
 
--- `:` cmdline setup.
 cmp.setup.cmdline(':', {
   mapping = cmp.mapping.preset.cmdline(),
   sources = cmp.config.sources({
-    { name = 'path' }
-  }, {
-      {
-        name = 'cmdline',
-        option = {
-          ignore_cmds = { 'Man', '!' }
-        }
-      }
-    })
+    { name = 'path' },
+    {
+      name = 'cmdline',
+      option = { ignore_cmds = { 'Man', '!' } }
+    }
+  }),
+  matching = { disallow_symbol_nonprefix_matching = false }
 })

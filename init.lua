@@ -5,8 +5,8 @@ require('packer_init')
 
 vim.cmd.colorscheme('rose-pine')
 
-require('lsp/lspconfig')
 require('plugins/nvim-cmp')
+require('lsp/lspconfig')
 require('plugins/fzf-lua')
 require('plugins/indent-blankline')
 require('plugins/smalls')
@@ -15,8 +15,9 @@ require('plugins/gitsigns')
 require('plugins/luasnip')
 require('plugins/firenvim')
 require('plugins/eslint')
--- require('plugins/obsidian')
 require('plugins/nvim-treesitter')
+
+-- require('plugins/obsidian')
 
 -- plugins
 require('nvim_comment').setup()

@@ -14,6 +14,7 @@ if not cmp_status_ok then
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+
 capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
 local on_attach = function(client, bufnr)
@@ -34,9 +35,8 @@ local on_attach = function(client, bufnr)
     })
   end
 
-  -- Mappings.
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
+
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -66,12 +66,6 @@ vim.diagnostic.config({
   },
 })
 
-local opts = { noremap=true, silent=true }
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_prev, opts)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_next, opts)
-vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, opts)
-
 local root_dir = function()
   return vim.fn.getcwd()
 end
@@ -87,15 +81,10 @@ local servers = {
   'tsserver'
 }
 
--- Call setup
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
     root_dir = root_dir,
     capabilities = capabilities,
-    flags = {
-      -- default in neovim 0.7+
-      debounce_text_changes = 150,
-    }
   }
 end

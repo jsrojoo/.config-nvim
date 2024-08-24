@@ -86,3 +86,11 @@ nmapleader('fh', ':FzfLua helptags<cr>')
 map('n', 's', '<Plug>(smalls)', { noremap=false })
 map('o', 's', '<Plug>(smalls)', { noremap=false })
 map('x', 's', '<Plug>(smalls)', { noremap=false })
+
+local opts = { noremap=true, silent=true }
+
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_prev, opts)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_next, opts)
+vim.keymap.set('n', '<leader>dl', vim.diagnostic.setloclist, opts)
+
